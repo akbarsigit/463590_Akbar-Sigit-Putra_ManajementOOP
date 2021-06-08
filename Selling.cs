@@ -22,7 +22,7 @@ namespace Project_Menejement
             InitializeComponent();
         }
 
-        SqlConnection Connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='C: \Users\Akbar\source\repos\Project Menejement\database\manajementdb.mdf';Integrated Security=True;Connect Timeout=30");
+        SqlConnection Connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Akbar\source\repos\Project Menejement\database\manajementdb.mdf;Integrated Security=True;Connect Timeout=30");
         public void dataLoad()
         {
             Connection.Open();

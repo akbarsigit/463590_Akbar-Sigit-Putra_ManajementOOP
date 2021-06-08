@@ -18,12 +18,12 @@ namespace Project_Menejement
             InitializeComponent();
         }
 
-        SqlConnection Connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='C: \Users\Akbar\source\repos\Project Menejement\database\manajementdb.mdf';Integrated Security=True;Connect Timeout=30");
+        SqlConnection Connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Akbar\source\repos\Project Menejement\database\manajementdb.mdf;Integrated Security=True;Connect Timeout=30");
 
         public void LoadComboBox()
         {
             Connection.Open();
-            SqlCommand command = new SqlCommand("SELECT name from CategoryTable", Connection);
+            SqlCommand command = new SqlCommand("SELECT name FROM CategoryTable", Connection);
             SqlDataReader rdr;
             rdr = command.ExecuteReader();
             DataTable dataTable = new DataTable();
@@ -137,7 +137,7 @@ namespace Project_Menejement
                 else
                 {
                     Connection.Open();
-                    string query = "UPDATE ProductTable SET name='" + ProdName.Text + "', qnty='" + ProdQty.Text + "', price='" + ProdPrice.Text + "' , catgry='" + ProdPrice.Text + "' WHERE id = '" + ComboBox.SelectedValue.ToString() + "'";
+                    string query = "UPDATE ProductTable SET name='" + ProdName.Text + "', qnty='" + ProdQty.Text + "', price='" + ProdPrice.Text + "' , catgry='" + ComboBox.SelectedValue.ToString() + "' WHERE id = '" + Prodid.Text + "'";
                     SqlCommand command = new SqlCommand(query, Connection);
                     command.ExecuteNonQuery();
                     MessageBox.Show("Edit Berhasil");

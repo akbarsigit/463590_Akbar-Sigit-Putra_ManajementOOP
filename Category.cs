@@ -19,7 +19,7 @@ namespace Project_Menejement
             InitializeComponent();
         }
 
-        SqlConnection Connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='C: \Users\Akbar\source\repos\Project Menejement\database\manajementdb.mdf';Integrated Security=True;Connect Timeout=30");
+        SqlConnection Connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Akbar\source\repos\Project Menejement\database\manajementdb.mdf;Integrated Security=True;Connect Timeout=30");
         private void button1_Click(object sender, EventArgs e)
         {
             try
@@ -120,12 +120,12 @@ namespace Project_Menejement
             {
                 if(CatgryIdTb.Text == "" || CatgryNameTb.Text == "" || CatgryDescTb.Text == "")
                 {
-                    MessageBox.Show("Missing Information");
+                    MessageBox.Show("Masukkan data yang ingin di edit");
                 }
                 else
                 {
                     Connection.Open();
-                    string query = "UPDATE CategoryTable SET name= '" + CatgryNameTb.Text + "', desc='" + CatgryDescTb.Text + "' WHERE id = " + CatgryIdTb.Text + "";
+                    string query = "UPDATE CategoryTable SET name='" + CatgryNameTb.Text + "', desc='" + CatgryDescTb.Text + "' WHERE id = " + CatgryIdTb.Text + "";
                     SqlCommand command = new SqlCommand(query, Connection);
                     command.ExecuteNonQuery();
                     MessageBox.Show("Edit Berhasil");

@@ -130,7 +130,7 @@ namespace Project_Menejement
             this.username.Name = "username";
             this.username.Size = new System.Drawing.Size(232, 44);
             this.username.TabIndex = 14;
-            this.username.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.username.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // password
             // 
@@ -149,7 +149,7 @@ namespace Project_Menejement
             this.password.Name = "password";
             this.password.Size = new System.Drawing.Size(232, 44);
             this.password.TabIndex = 15;
-            this.password.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.password.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // bunifuThinButton21
             // 

@@ -32,8 +32,8 @@ namespace Project_Menejement
             {
                 if(username.Text == "Admin" && password.Text == "Admin")
                 {
-                    Product product = new Product();
-                    product.Show();
+                    Menu menu = new Menu();
+                    menu.Show();
                     this.Hide();
                 }
                 else
